@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="371.0" style="-fx-background-color: #1A2B4C;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc2040.edu.budgetbuddy.SetSavingsGoalController">
+   <children>
+      <Text layoutX="12.0" layoutY="33.0" style="-fx-fill: #F0F0F0;" text="Budget Buddy">
+         <font>
+            <Font name="Bodoni 72 Oldstyle Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="184.0" layoutY="32.0" style="-fx-fill: #F0F0F0;" text="Set Savings Goal">
+         <font>
+            <Font name="Bodoni 72 Oldstyle Bold" size="18.0" />
+         </font>
+      </Text>
+      <Separator layoutX="171.0" layoutY="7.0" orientation="VERTICAL" prefHeight="39.0" style="-fx-border-color: #1A2B4C;" />
+      <Text layoutX="11.0" layoutY="79.0" style="-fx-fill: #F0F0F0;" text="Amount you would like to save">
+         <font>
+            <Font name="Bodoni 72 Oldstyle Bold" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="savingsAmountField" alignment="CENTER_RIGHT" layoutX="24.0" layoutY="98.0" prefHeight="27.0" prefWidth="324.0" promptText="Enter amount" style="-fx-background-color: #F0F0F0;" />
+      <Text layoutX="11.0" layoutY="168.0" style="-fx-fill: #F0F0F0;" text="Deadline">
+         <font>
+            <Font name="Bodoni 72 Oldstyle Bold" size="16.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="deadlineField" layoutX="24.0" layoutY="182.0" prefHeight="27.0" prefWidth="324.0" />
+      <Text layoutX="11.0" layoutY="246.0" style="-fx-fill: #F0F0F0;" text="Reason">
+         <font>
+            <Font name="Bodoni 72 Oldstyle Bold" size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="loanButton" layoutX="22.0" layoutY="271.0" mnemonicParsing="false" prefWidth="96.0" style="-fx-background-color: #F0F0F0; -fx-text-fill: #1A2B4C;" text="Loan" />
+      <Button fx:id="savingsButton" layoutX="137.0" layoutY="271.0" mnemonicParsing="false" prefWidth="96.0" style="-fx-background-color: #F0F0F0; -fx-text-fill: #1A2B4C;" text="Savings" />
+      <Button fx:id="entertainmentButton" layoutX="250.0" layoutY="271.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="96.0" style="-fx-background-color: #F0F0F0; -fx-text-fill: #1A2B4C;" text="Entertainment" />
+      <Button fx:id="otherButton" layoutX="136.0" layoutY="327.0" mnemonicParsing="false" prefWidth="96.0" style="-fx-background-color: #F0F0F0; -fx-text-fill: #1A2B4C;" text="Other" />
+      <Button fx:id="billsButton" layoutX="23.0" layoutY="327.0" mnemonicParsing="false" prefWidth="96.0" style="-fx-background-color: #F0F0F0; -fx-text-fill: #1A2B4C;" text="Bills" />
+      <Button fx:id="savingsAddButton" layoutX="315.0" layoutY="395.0" mnemonicParsing="false" onAction="#submitSavingsGoal" style="-fx-background-color: #F0F0F0; -fx-text-fill: #1A2B4C;" text="Add" />
+      <Button fx:id="cancelButton" layoutX="228.0" layoutY="395.0" mnemonicParsing="false" onAction="#cancel" prefHeight="23.0" prefWidth="59.0" style="-fx-background-color: #1A2B4C;" text="Cancel" textFill="#F0F0F0" />
+      <Separator layoutX="299.0" layoutY="390.0" orientation="VERTICAL" prefHeight="39.0" prefWidth="8.0" style="-fx-border-color: #1A2B4C;" />
+       <Text fx:id="amountErrorText" layoutX="22.0" layoutY="144.0" style="-fx-fill: red; -fx-font-weight: bold;" wrappingWidth="324.0" />
+        <Text fx:id="dateErrorText" layoutX="23.0" layoutY="229.0" style="-fx-fill: red; -fx-font-weight: bold;" wrappingWidth="324.0" />
+   </children>
+</AnchorPane>

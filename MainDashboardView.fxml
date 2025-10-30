@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="656.0" prefWidth="694.0" style="-fx-background-color: #1A2B4C;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc2040.edu.budgetbuddy.MainDashboardViewController">
+    <children>
+        <Text layoutX="28.0" layoutY="37.0" style="-fx-fill: #F0F0F0;" text="Budget Buddy">
+            <font>
+                <Font name="Bodoni 72 Oldstyle Bold" size="24.0" />
+            </font>
+        </Text>
+        <Separator layoutX="187.0" layoutY="11.0" orientation="VERTICAL" prefHeight="39.0" style="-fx-border-color: #1A2B4C;" />
+        <Text layoutX="199.0" layoutY="36.0" style="-fx-fill: #F0F0F0;" text="Dashboard">
+            <font>
+                <Font name="Bodoni 72 Oldstyle Bold" size="18.0" />
+            </font>
+        </Text>
+
+        <Rectangle arcHeight="10.0" arcWidth="10.0" height="246.0" layoutX="27.0" layoutY="78.0" style="-fx-fill: #E0E0E0; -fx-stroke: #2A4B72; -fx-stroke-width: 2;" width="202.0" />
+        <Text layoutX="34.0" layoutY="107.0" style="-fx-fill: #2A4B72;" text="Monthly Summary">
+            <font>
+                <Font name="Bodoni 72 Oldstyle Bold" size="18.0" />
+            </font>
+        </Text>
+
+        <Text layoutX="34.0" layoutY="134.0" style="-fx-fill: #2A4B72;" text="Income">
+            <font>
+                <Font name="Bodoni 72 Oldstyle Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="incomeValue" layoutX="43.0" layoutY="185.0" style="-fx-fill: #2A4B72;" text="0.00" wrappingWidth="173.60231399536133">
+            <font>
+                <Font name="Bodoni 72 Oldstyle Bold" size="24.0" />
+            </font>
+        </Text>
+        <Text layoutX="86.0" layoutY="134.0" style="-fx-fill: green; -fx-font-size: 14;" text="▲" />
+
+        <Text layoutX="34.0" layoutY="230.0" style="-fx-fill: #2A4B72;" text="Expense">
+            <font>
+                <Font name="Bodoni 72 Oldstyle Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="expenseValue" layoutX="41.0" layoutY="283.0" style="-fx-fill: #2A4B72;" text="0.00" wrappingWidth="173.602294921875">
+            <font>
+                <Font name="Bodoni 72 Oldstyle Bold" size="24.0" />
+            </font>
+        </Text>
+        <Text layoutX="87.0" layoutY="232.0" style="-fx-fill: red; -fx-font-size: 14;" text="▼" wrappingWidth="17.99395751953125">
+            <font>
+                <Font size="33.0" />
+            </font>
+        </Text>
+        <Rectangle arcHeight="10.0" arcWidth="10.0" height="246.0" layoutX="27.0" layoutY="362.0" style="-fx-fill: #E0E0E0; -fx-stroke: #2A4B72; -fx-stroke-width: 2;" width="202.0" />
+        <Button fx:id="btnAddIncome" layoutX="58.0" layoutY="399.0" mnemonicParsing="false" onAction="#navigateToAddIncome" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: #2A4B72; -fx-text-fill: #F0F0F0; -fx-font-family: 'Bodoni 72 Oldstyle';" text="Add Income" />
+        <Button fx:id="btnAddExpense" layoutX="58.0" layoutY="446.0" mnemonicParsing="false" onAction="#navigateToAddExpense" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: #2A4B72; -fx-text-fill: #F0F0F0; -fx-font-family: 'Bodoni 72 Oldstyle';" text="Add Expense" />
+        <Button fx:id="btnSetSavingsGoal" layoutX="58.0" layoutY="492.0" mnemonicParsing="false" onAction="#navigateToSetSavingsGoal" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: #2A4B72; -fx-text-fill: #F0F0F0; -fx-font-family: 'Bodoni 72 Oldstyle';" text="Set Savings Goal" />
+        <Button fx:id="btnExitDashBoard" layoutX="58.0" layoutY="537.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="135.0" style="-fx-background-color: #2A4B72; -fx-text-fill: #F0F0F0; -fx-font-family: 'Bodoni 72 Oldstyle';" text="Exit" onAction="#exitApplication" />
+        <Rectangle arcHeight="10.0" arcWidth="10.0" height="246.0" layoutX="276.0" layoutY="79.0" style="-fx-fill: #E0E0E0; -fx-stroke: #2A4B72; -fx-stroke-width: 2;" width="384.0" />
+        <LineChart fx:id="MonthlySummaryGraph" layoutX="287.0" layoutY="115.0" prefHeight="200.0" prefWidth="347.0" style="-fx-background-color: #E0E0E0;">
+            <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="xAxis1" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis1" side="LEFT" />
+            </yAxis>
+        </LineChart>
+
+        <Rectangle arcHeight="10.0" arcWidth="10.0" height="246.0" layoutX="277.0" layoutY="362.0" style="-fx-fill: #E0E0E0; -fx-stroke: #2A4B72; -fx-stroke-width: 2;" width="384.0" />
+        
+        <Text layoutX="291.0" layoutY="390.0" style="-fx-fill: #2A4B72;" text="Savings">
+            <font>
+                <Font name="Bodoni 72 Oldstyle Bold" size="18.0" />
+            </font>
+        </Text>
+        <LineChart fx:id="SavingsGraph" layoutX="293.0" layoutY="411.0" prefHeight="192.0" prefWidth="353.0">
+            <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="xAxis2" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis2" side="LEFT" />
+            </yAxis>
+        </LineChart>
+    </children>
+</AnchorPane>

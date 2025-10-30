@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="371.0" style="-fx-background-color: #1A2B4C;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="csc2040.edu.budgetbuddy.AddIncomeController">
+    <children>
+        <Separator layoutX="174.0" layoutY="17.0" orientation="VERTICAL" prefHeight="39.0" style="-fx-border-color: #1A2B4C;" />
+        <Text layoutX="199.0" layoutY="42.0" style="-fx-fill: #F0F0F0;" text="Add Income">
+            <font>
+                <Font name="Bodoni 72 Oldstyle Bold" size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="22.0" layoutY="43.0" style="-fx-fill: #F0F0F0;" text="Budget Buddy">
+            <font>
+                <Font name="Bodoni 72 Oldstyle Bold" size="24.0" />
+            </font>
+        </Text>
+        <Separator layoutX="309.0" layoutY="389.0" orientation="VERTICAL" prefHeight="39.0" prefWidth="8.0" style="-fx-border-color: #1A2B4C;" />
+        <Button fx:id="cancelButton" layoutX="239.0" layoutY="395.0" mnemonicParsing="false" onAction="#cancel" prefHeight="23.0" prefWidth="59.0" style="-fx-background-color: #1A2B4C;" text="Cancel" textFill="#F0F0F0" />
+        <Button fx:id="addButton" layoutX="321.0" layoutY="395.0" mnemonicParsing="false" onAction="#submitIncome" style="-fx-background-color: #F0F0F0; -fx-text-fill: #1A2B4C;" text="Add" />
+        <Text layoutX="17.0" layoutY="121.0" style="-fx-fill: #F0F0F0;" text="Amount">
+            <font>
+                <Font name="Bodoni 72 Oldstyle Bold" size="16.0" />
+            </font>
+        </Text>
+        <TextField fx:id="incomeAmountField" alignment="CENTER_RIGHT" layoutX="30.0" layoutY="140.0" prefHeight="27.0" prefWidth="324.0" promptText="Enter amount" style="-fx-background-color: #F0F0F0;" />
+        <Text layoutX="17.0" layoutY="248.0" style="-fx-fill: #F0F0F0;" text="Date">
+            <font>
+                <Font name="Bodoni 72 Oldstyle Bold" size="16.0" />
+            </font>
+        </Text>
+        <DatePicker fx:id="incomeAddDate" layoutX="30.0" layoutY="261.0" prefHeight="27.0" prefWidth="324.0" />
+        <Text fx:id="amountErrorText" layoutX="30.0" layoutY="188.0" style="-fx-fill: red; -fx-font-weight: bold;" wrappingWidth="324.0" />
+        <Text fx:id="dateErrorText" layoutX="30.0" layoutY="313.0" style="-fx-fill: red; -fx-font-weight: bold;" wrappingWidth="324.0" />
+      <Text layoutX="182.0" layoutY="40.0" style="-fx-fill: green; -fx-font-size: 14;" text="▲" />
+    </children>
+</AnchorPane>
